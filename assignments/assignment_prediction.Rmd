@@ -10,7 +10,7 @@ output:
     latex_engine: xelatex
 ---
 
-Pass / Fail assignment
+Graded assignment
 
 ### Find a dataset and create and form, build and evaluate a prediction model. 
 You can use data from anywhere. For example, you may use [Google dataset search](https://toolbox.google.com/datasetsearch), [Kaggle datasets](https://www.kaggle.com/datasets), a dataset from an `R` package, or something you collected yourself.

@@ -3101,15 +3101,15 @@ accessed.</p>
 <h2>Column 1</h2>
 <div id="assignment-1" class="section level3">
 <h3>Assignment 1</h3>
-<p>You can <a href="assignments/assignment1_eda.html">find last year’s
+<p>You can <a href="assignments/assignment_eda.html">find this year’s
 assignment 1 here</a></p>
-<p>Due date is most likely Oct 3 @ 23.59pm.</p>
+<p>Due date is Oct 3 @ 23.59pm.</p>
 </div>
 <div id="assignment-2" class="section level3">
 <h3>Assignment 2</h3>
-<p>You can <a href="assignments/assignment_prediction.html">find last
+<p>You can <a href="assignments/assignment_prediction.html">find this
 year’s assignment 2 here</a></p>
-<p>Due date is most likely Nov 13 @ 23.59pm.</p>
+<p>Due date is Nov 13 @ 23.59pm.</p>
 </div>
 </div>
 </div>
@@ -3285,6 +3285,14 @@ set and its labeling to be more informative.</li>
 <h3>Q&amp;A</h3>
 <p>During the Q&amp;A session on Wednesday, we will devote some time to
 missing data analysis</p>
+If you’d like to get rid of the <code>DS_Store</code> files that Mac
+systems generate, then run the following in the terminal:
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cd <span class="st">&quot;PATH TO YOUR GIT REPO&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>git rm <span class="sc">--</span>cached <span class="st">&quot;*.DS_Store&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">&quot;remove all .DS_Store&quot;</span></span></code></pre></div>
 </div>
 <div id="practical-2" class="section level3">
 <h3>Practical</h3>
@@ -3326,6 +3334,11 @@ href="https://www.thisismetis.com/blog/misleading-graphs-manipulating-the-y-axis
 wonderful post about misusing the y-axis</a>.</li>
 <li><a href="https://ggplot2.tidyverse.org"><code>ggplot</code>’s
 reference page</a></li>
+<li><a href="https://colorbrewer2.org/">A tool to pick color
+palettes</a> including palettes that are color-blind accessible.</li>
+<li><a
+href="https://towardsdatascience.com/how-to-use-color-palettes-for-your-data-visualization-ac4eaf3de37b">A
+color palette tutorial for seaborn, vega-altair, and ggplot2</a></li>
 </ul>
 </div>
 <div id="must-watch-1" class="section level3">
@@ -3414,11 +3427,11 @@ href="https://www.uu.nl/en/buys-ballot-building">BBG 201</a>)</h3>
 given to you. Use these answers to help yourself when you’re stuck.</p>
 <ul>
 <li><a
-href="practicals/06_classification/06_classification.html">Practical 6:
+href="practicals/06_classification/06_classification.html">Practical 5:
 Classification</a></li>
 <li><a
 href="practicals/06_classification/06_classification_answers.html">Practical
-6: Classification answers</a></li>
+5: Classification answers</a></li>
 <li><a href="practicals/06_classification/data.zip">data</a></li>
 </ul>
 <p>Hand in by PR from your fork <a
@@ -3426,6 +3439,17 @@ href="https://github.com/gerkovink/INFOMDA1-2022">here</a>. Ask
 questions through <a
 href="https://github.com/gerkovink/INFOMDA1-2022/issues">GitHub issues
 here</a></p>
+<p><strong>NOT HAND IN, BUT STILL USEFUL</strong>: I also give you the
+following practical from last year. Please view and study the practical
+up to and including Exercise 10. No need to hand anything in. All the
+regularization (<code>glmnet</code>) exercises 11-19 are not relevant
+for this course, but you may of course use the methods in your
+Assignment 2 if you wish. Let me know if you have any questions.</p>
+<ul>
+<li><a
+href="practicals/05_Regression_Evaluation/05_Regression_Evaluation_answers.html">Practical:
+Best subset selection and regularization</a></li>
+</ul>
 </div>
 </div>
 <div id="column-2-6" class="section level2">
@@ -3460,10 +3484,10 @@ given to you. Use these answers to help yourself when you’re stuck.</p>
 <ul>
 <li><a
 href="practicals/07_classification_evaluation/07_classification_evaluation.html">Practical
-7: Classification evaluation</a></li>
+6: Classification evaluation</a></li>
 <li><a
 href="practicals/07_classification_evaluation/07_classification_evaluation_answers.html">Practical
-7: Classification evaluation answers</a></li>
+6: Classification evaluation answers</a></li>
 <li><a
 href="practicals/07_classification_evaluation/data.zip">data</a></li>
 </ul>
@@ -3507,10 +3531,10 @@ stuck.</p>
 <ul>
 <li><a
 href="practicals/08_nonlinear_regression/08_nonlinear_regression.html">Practical
-8: Nonlinear regression</a></li>
+7: Nonlinear regression</a></li>
 <li><a
 href="practicals/08_nonlinear_regression/08_nonlinear_regression_answers.html">Practical
-8: Nonlinear regression answers</a></li>
+7: Nonlinear regression answers</a></li>
 </ul>
 <p>Hand in by PR from your fork <a
 href="https://github.com/gerkovink/INFOMDA1-2022">here</a>. Ask
@@ -3550,10 +3574,10 @@ href="https://www.uu.nl/en/buys-ballot-building">BBG 201</a>)</h3>
 also given to you. Use these answers to help yourself when you’re
 stuck.</p>
 <ul>
-<li><a href="practicals/09_ensemble/09_ensemble.html">Practical 9:
+<li><a href="practicals/09_ensemble/09_ensemble.html">Practical 8:
 Tree-based methods and SVM</a></li>
 <li><a href="practicals/09_ensemble/09_ensemble_answers.html">Practical
-9: Tree-based methods and SVM answers</a></li>
+8: Tree-based methods and SVM answers</a></li>
 <li><a href="practicals/09_ensemble/data.zip">Data</a></li>
 </ul>
 <p>Hand in by PR from your fork <a

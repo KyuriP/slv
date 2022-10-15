@@ -202,14 +202,14 @@ Naturally, you will need internet access for these services to be accessed.
 
 ### Assignment 1
 
-You can [find last year's assignment 1 here](assignments/assignment1_eda.html)
+You can [find this year's assignment 1 here](assignments/assignment_eda.html)
 
-Due date is most likely Oct 3 @ 23.59pm.
+Due date is Oct 3 @ 23.59pm.
 
 ### Assignment 2
-You can [find last year's assignment 2 here](assignments/assignment_prediction.html)
+You can [find this year's assignment 2 here](assignments/assignment_prediction.html)
 
-Due date is most likely Nov 13 @ 23.59pm.
+Due date is Nov 13 @ 23.59pm.
 
 # Week 1
 
@@ -312,6 +312,14 @@ This week's slides:
 ### Q&A
 During the Q&A session on Wednesday, we will devote some time to missing data analysis
 
+If you'd like to get rid of the `DS_Store` files that Mac systems generate, then run the following in the terminal:
+```{r eval = FALSE, echo = TRUE}
+cd "PATH TO YOUR GIT REPO"
+git rm --cached "*.DS_Store"
+git commit -m "remove all .DS_Store"
+```
+
+
 ### Practical
 This week's practical is on exploratory data analysis. Code solutions are also given to you. Use these answers to help yourself when you're stuck. 
 
@@ -334,6 +342,8 @@ The following links may be useful
 
 - [A wonderful post about misusing the y-axis](https://www.thisismetis.com/blog/misleading-graphs-manipulating-the-y-axis). 
 - [`ggplot`'s reference page](https://ggplot2.tidyverse.org)
+- [A tool to pick color palettes](https://colorbrewer2.org/) including palettes that are color-blind accessible. 
+- [A color palette tutorial for seaborn, vega-altair, and ggplot2 ](https://towardsdatascience.com/how-to-use-color-palettes-for-your-data-visualization-ac4eaf3de37b)
 
 ### Must watch
 The following lecture by [Edward Tufte](https://www.edwardtufte.com/tufte/) is quite nice. 
@@ -410,11 +420,15 @@ This week's slides:
 ### Practical
 This week's practical is on classification. Code solutions are also given to you. Use these answers to help yourself when you're stuck. 
 
-- [Practical 6: Classification](practicals/06_classification/06_classification.html)
-- [Practical 6: Classification answers](practicals/06_classification/06_classification_answers.html)
+- [Practical 5: Classification](practicals/06_classification/06_classification.html)
+- [Practical 5: Classification answers](practicals/06_classification/06_classification_answers.html)
 - [data](practicals/06_classification/data.zip)
 
 Hand in by PR from your fork [here](https://github.com/gerkovink/INFOMDA1-2022). Ask questions through [GitHub issues here](https://github.com/gerkovink/INFOMDA1-2022/issues)
+
+**NOT HAND IN, BUT STILL USEFUL**: I also give you the following practical from last year. Please view and study the practical up to and including Exercise 10. No need to hand anything in. All the regularization (`glmnet`) exercises 11-19 are not relevant for this course, but you may of course use the methods in your Assignment 2 if you wish. Let me know if you have any questions. 
+
+- [Practical: Best subset selection and regularization](practicals/05_Regression_Evaluation/05_Regression_Evaluation_answers.html)
 
 ## Column 2
 
@@ -438,8 +452,8 @@ This week's slides:
 ### Practical
 This week's practical is on classification. Code solutions are also given to you. Use these answers to help yourself when you're stuck.
 
-- [Practical 7: Classification evaluation](practicals/07_classification_evaluation/07_classification_evaluation.html)
-- [Practical 7: Classification evaluation answers](practicals/07_classification_evaluation/07_classification_evaluation_answers.html)
+- [Practical 6: Classification evaluation](practicals/07_classification_evaluation/07_classification_evaluation.html)
+- [Practical 6: Classification evaluation answers](practicals/07_classification_evaluation/07_classification_evaluation_answers.html)
 - [data](practicals/07_classification_evaluation/data.zip)
 
 Hand in by PR from your fork [here](https://github.com/gerkovink/INFOMDA1-2022). Ask questions through [GitHub issues here](https://github.com/gerkovink/INFOMDA1-2022/issues)
@@ -468,8 +482,8 @@ This week's slides:
 ### Practical
 This week's practical is on nonlinear regression. Code solutions are also given to you. Use these answers to help yourself when you're stuck.
 
-- [Practical 8: Nonlinear regression](practicals/08_nonlinear_regression/08_nonlinear_regression.html)
-- [Practical 8: Nonlinear regression answers](practicals/08_nonlinear_regression/08_nonlinear_regression_answers.html)
+- [Practical 7: Nonlinear regression](practicals/08_nonlinear_regression/08_nonlinear_regression.html)
+- [Practical 7: Nonlinear regression answers](practicals/08_nonlinear_regression/08_nonlinear_regression_answers.html)
 
 Hand in by PR from your fork [here](https://github.com/gerkovink/INFOMDA1-2022). Ask questions through [GitHub issues here](https://github.com/gerkovink/INFOMDA1-2022/issues)
 
@@ -496,8 +510,8 @@ This week's slides:
 ### Practical
 This week's practical is on nonlinear regression. Code solutions are also given to you. Use these answers to help yourself when you're stuck.
 
-- [Practical 9: Tree-based methods and SVM](practicals/09_ensemble/09_ensemble.html)
-- [Practical 9: Tree-based methods and SVM answers](practicals/09_ensemble/09_ensemble_answers.html)
+- [Practical 8: Tree-based methods and SVM](practicals/09_ensemble/09_ensemble.html)
+- [Practical 8: Tree-based methods and SVM answers](practicals/09_ensemble/09_ensemble_answers.html)
 - [Data](practicals/09_ensemble/data.zip)
 
 Hand in by PR from your fork [here](https://github.com/gerkovink/INFOMDA1-2022). Ask questions through [GitHub issues here](https://github.com/gerkovink/INFOMDA1-2022/issues)
