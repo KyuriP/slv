@@ -112,8 +112,6 @@ y_pred <- predict(lm_ses)
 
 5. __Create a scatter plot with `y_pred` mapped to the x position and the true y value (`Boston$medv`) mapped to the y value. What do you see? What would this plot look like if the fit were perfect?__
 
----
-
 ```{r predobs, include = params$answers}
 tibble(pred = y_pred, 
        obs  = Boston$medv) %>% 

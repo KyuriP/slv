@@ -55,12 +55,23 @@ In the `data/` folder there is a cardiovascular disease dataset of 253 patients.
 - dose of the treatment administered: 1 (lowest), 2 (medium), or 3 (highest)
 
 
+```{r}
+treat <- read_csv("data/cardiovascular_treatment.csv") 
+glimpse(treat)
+str(treat)
+```
 
 ---
 
 1. __Create a logistic regression model `lr_mod` for this data using the formula `response ~ .` and create a confusion matrix based on a .5 cutoff probability.__
 
 ---
+```{r}
+lr_mod <- glm(response ~., family = binomial, data = treat)
+pred <- predict(lr_mod, type ="response")
+pred_lr <- ifelse(pred>0.5, 1, 0)
+table(prediction = pred_lr, true = treat$response)
+```
 
 ```{r lr_treatment, message = FALSE, include = params$answers}
 
@@ -223,6 +234,12 @@ mean((prob_lr_new - (as.numeric(new_patients$response) - 1)) ^ 2)
 5. __Create two LR models: `lr1_mod` with `severity`, `age`, and `bb_score` as predictors, and `lr2_mod` with the formula `response ~ age + I(age^2) + gender + bb_score * prior_cvd * dose`. Save the predicted probabilities on the training data.__
 
 ---
+```{r}
+lr1_mod <- glm(response ~ severity + bb_score + age, family = binomial, data=treat)
+lr2_mod <- glm(response ~ age + I(age^2) + gender + bb_score * prior_cvd * dose, family = binomial, data=treat)
+
+```
+
 
 
 ```{r predprob, include = params$answers}
@@ -248,7 +265,8 @@ prob_lr2 <- predict(lr2_mod, type = "response")
 roc_lr1 <- roc(treat$response, prob_lr1)
 roc_lr2 <- roc(treat$response, prob_lr2)
 
-ggroc(roc_lr1) + theme_minimal() + labs(title = "LR1")
+ggroc(roc_lr1) + theme_minimal() + labs(title = "LR1") + geom_segment(aes(x = 1, xend = 0, y = 0, yend = 1), color="grey", linetype="dashed")
+
 ggroc(roc_lr2) + theme_minimal() + labs(title = "LR2")
 
 # The LR2 model performs better: at just about every cutoff value, both the
@@ -302,6 +320,7 @@ We can reproduce this graph using the first linear discriminant from the `lda()`
 # fit lda model, i.e. calculate model parameters
 lda_iris <- lda(Species ~ ., data = iris)
 
+lda_iris$scaling
 # use those parameters to compute the first linear discriminant
 first_ld <- -c(as.matrix(iris[, -5]) %*% lda_iris$scaling[,1])
 
@@ -394,6 +413,11 @@ Classification trees in `R` can be fit using the `rpart()` function.
 
 ---
 
+```{r}
+tree <- rpart(Species ~., data = iris)
+rpart.plot(tree)
+```
+
 ```{r rpart, include = params$answers}
 
 iris_tree_mod <- rpart(Species ~ ., data = iris)
@@ -448,7 +472,7 @@ There are several control parameters (tuning parameters) to the `rpart()` algori
 
 
 ```{r treefull, include = params$answers}
-
+?rpart.control
 iris_tree_full_mod <- rpart(Species ~ ., data = iris, 
                             control = rpart.control(minbucket = 1, cp = 0))
 
